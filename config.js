@@ -1,3 +1,1 @@
-window.KARBA_CONFIG = {
-  BACKEND_URL: 'https://karba-backend-jgbp.onrender.com'
-};
+window.KARBA_CONFIG = { BACKEND_URL: 'https://karba-backend-jgbp.onrender.com' };
