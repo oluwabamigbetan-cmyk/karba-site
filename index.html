@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KARBA — Test Frontend</title>
+  <script src="config.js"></script>
+  <style>
+    body{font-family:Arial, sans-serif;background:#0B1A3B;color:#fff;margin:0}
+    .wrap{max-width:760px;margin:40px auto;padding:24px}
+    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px}
+    label{display:block;margin-top:12px;font-size:14px;color:#EEDC82}
+    input{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff}
+    button{margin-top:16px;padding:12px 16px;border-radius:10px;background:#D4AF37;border:none;color:#0B1A3B;font-weight:700;cursor:pointer}
+    pre{background:#0a0f22;border:1px solid #1f2a5a;color:#9ef59e;padding:12px;border-radius:12px;min-height:120px;white-space:pre-wrap}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 style="color:#D4AF37;margin:0 0 8px">KARBA Test Frontend</h1>
+    <div class="card">
+      <div>Backend URL: <code id="burl"></code></div>
+      <form id="lead">
+        <label>Full name</label>
+        <input name="fullName" required placeholder="Jane Doe" />
+        <label>Email</label>
+        <input name="email" type="email" required placeholder="jane@example.com" />
+        <button>Send Test Lead</button>
+      </form>
+    </div>
+    <h3 style="margin-top:22px;color:#EEDC82">Response</h3>
+    <pre id="out"></pre>
+  </div>
+  <script>
+    const back = (window.KARBA_CONFIG && window.KARBA_CONFIG.BACKEND_URL) || '';
+    document.getElementById('burl').textContent = back || '(set BACKEND_URL in config.js)';
+    document.getElementById('lead').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      const r = await fetch(back + '/api/leads', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+      });
+      document.getElementById('out').textContent = await r.text();
+    });
+  </script>
+</body>
+</html>
