@@ -1,94 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KARBA Financial Consultant</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon (inline, avoids 404) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a1424'/><text x='50' y='60' font-size='54' text-anchor='middle' fill='%23d4af37' font-family='Georgia,serif'>K</text></svg>">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>Live Confidently. Invest Wisely. Leave a Legacy.</h1>
-      <p>Trusted protection and investment solutions for families, professionals, and growing businesses.</p>
-      <div class="cta-buttons">
-        <a href="#consultation" class="btn-primary">Get Covered Today</a>
-        <a href="https://wa.me/2349162631205?text=Hello%20KARBA,%20I'd%20like%20a%20free%20consultation." target="_blank" class="btn-secondary">Chat on WhatsApp</a>
+  <!-- Header -->
+  <header class="container header">
+    <div class="brand">
+      <div class="brand-mark">◆</div>
+      <div>
+        <div class="brand-name">KARBA</div>
+        <div class="brand-sub">FINANCIAL CONSULTANT</div>
       </div>
     </div>
+
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="btn btn-outline" href="#consultation">Book Free Consultation</a>
+    </nav>
   </header>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service-card"> 
-          <h3>Life Insurance Policies</h3>
-          <p>Affordable, reliable, and designed to secure your loved ones and estate.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Live Confidently. Invest Wisely. Leave a Legacy.</h1>
+        <p>Trusted protection and investment solutions for families, professionals, and growing businesses.</p>
+        <div class="cta-row">
+          <a class="btn" href="#consultation">Get Covered Today</a>
+          <a class="btn btn-outline" id="whatsappBtn" target="_blank" rel="noopener">Chat on WhatsApp</a>
         </div>
-        <div class="service-card"> 
-          <h3>Retirement & Annuity</h3>
-          <p>Build stable, lifetime income streams and protect your retirement future.</p>
-        </div>
-        <div class="service-card"> 
-          <h3>Children Education Plans</h3>
-          <p>Protect tuition and long-term academic opportunities for your children.</p>
-        </div>
-        <div class="service-card"> 
-          <h3>Family Protection Plans</h3>
-          <p>Comprehensive cover for income, health gaps, and unexpected events.</p>
-        </div>
-        <div class="service-card"> 
-          <h3>Motor / Car Insurance</h3>
-          <p>Third-party and comprehensive cover with fast claims processing.</p>
-        </div>
-        <div class="service-card"> 
-          <h3>General Insurance</h3>
-          <p>From burglary, travel, and more — we tailor cover for your unique risks.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <div class="hero-card-title">Black happy family — protected &amp; thriving.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Consultation Form -->
-  <section id="consultation" class="consultation">
+  <!-- Services -->
+  <section id="services" class="section">
     <div class="container">
-      <h2>Book a Free Consultation</h2>
-      <form id="consultation-form">
-        <input type="text" name="fullName" placeholder="Your full name" required>
-        <input type="email" name="email" placeholder="you@example.com" required>
-        <input type="tel" name="phone" placeholder="+234..." />
-        <select name="service" required>
-          <option value="">Select a service of interest</option>
-          <option value="Life Insurance">Life Insurance</option>
-          <option value="Education Plan">Children Education Plan</option>
-          <option value="Annuity">Retirement & Annuity</option>
-          <option value="Family Protection">Family Protection</option>
-        </select>
-        <textarea name="message" placeholder="Tell us your goal..."></textarea>
-        <button type="submit" class="btn-primary">Submit</button>
-        <div id="form-status" class="form-status"></div>
+      <h2 class="section-title">Our Services</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Life Insurance Policies</h3>
+          <p>Affordable, reliable, and designed to secure your loved ones and estate.</p>
+        </article>
+        <article class="card">
+          <h3>Children Education Plans</h3>
+          <p>Protect tuition and long-term academic opportunities for your children.</p>
+        </article>
+        <article class="card">
+          <h3>Retirement &amp; Annuity</h3>
+          <p>Build stable income streams and protect your retirement future.</p>
+        </article>
+        <article class="card">
+          <h3>Family Protection Plans</h3>
+          <p>Comprehensive cover for income gaps and unexpected events.</p>
+        </article>
+        <article class="card">
+          <h3>Motor / Car Insurance</h3>
+          <p>Third-party and comprehensive cover with fast claims processing.</p>
+        </article>
+        <article class="card">
+          <h3>General Insurance</h3>
+          <p>From burglary, travel, and more — we’ll tailor cover for your risks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-muted">
+    <div class="container">
+      <h2 class="section-title">About KARBA</h2>
+      <p>
+        KARBA Financial Consultant serves as an intermediary between clients and insurance providers,
+        ensuring families, children, and businesses are financially protected. We focus on independent
+        advice, modern process, and ongoing support.
+      </p>
+    </div>
+  </section>
+
+  <!-- Consultation -->
+  <section id="consultation" class="section">
+    <div class="container">
+      <h2 class="section-title">Book a Free Consultation</h2>
+
+      <form id="lead-form" class="form">
+        <div class="form-row">
+          <label>Full name
+            <input type="text" name="fullName" placeholder="Your full name" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Phone (optional)
+            <input type="tel" name="phone" placeholder="0809 001 4569" />
+          </label>
+          <label>Service of interest
+            <select name="service" required>
+              <option value="Life Insurance">Life Insurance</option>
+              <option value="Children Education Plan">Children Education Plan</option>
+              <option value="Retirement & Annuity">Retirement & Annuity</option>
+              <option value="Family Protection">Family Protection</option>
+              <option value="Motor / Car Insurance">Motor / Car Insurance</option>
+              <option value="General Insurance">General Insurance</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Message (optional)
+          <textarea name="message" rows="4" placeholder="Tell us your goal…"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button id="submitBtn" class="btn" type="submit">Submit</button>
+          <div id="form-status" class="status" role="status" aria-live="polite"></div>
+        </div>
       </form>
+
+      <!-- reCAPTCHA v3 -->
+      <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container foot-inner">
-      <div class="brand-title">KARBA</div>
-      <div class="brand-sub">FINANCIAL CONSULTANT</div>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/babatunde-bamigbetan-1a4b6b4122">LinkedIn</a>
-        <a href="https://www.facebook.com/share/15yLZ7TtEr">Facebook</a>
-        <a href="https://www.instagram.com/karba_financialconsultant">Instagram</a>
-        <a href="https://www.youtube.com/@KarbaFinancialConsultant">YouTube</a>
+      <div class="brand foot-brand">
+        <div class="brand-mark">◆</div>
+        <div>
+          <div class="brand-name">KARBA</div>
+          <div class="brand-sub">FINANCIAL CONSULTANT</div>
+        </div>
       </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/babatunde-bamigbetan-14a4b6142" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/share/16LyzTFTEt/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/karba_f.c" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@KarbaFinancialConsultant" target="_blank" rel="noopener">YouTube</a>
+      </div>
+
       <div class="copy">© 2025 KARBA. All rights reserved.</div>
     </div>
   </footer>
 
+  <!-- Config first, then script -->
   <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
