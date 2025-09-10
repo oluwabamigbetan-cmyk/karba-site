@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARBA Financial Consultant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Live Confidently. Invest Wisely. Leave a Legacy.</h1>
+      <p>Your trusted partner in Life Insurance & Financial Consulting</p>
+      <a href="#consultation" class="btn-primary">Book a Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">Life Insurance</div>
+      <div class="service">Children Education Plan</div>
+      <div class="service">Annuity & Retirement</div>
+      <div class="service">Family Protection</div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <h2>About KARBA</h2>
+    <p>
+      KARBA Financial Consultant serves as an intermediary between clients and
+      insurance providers, ensuring families, children, and businesses are
+      financially protected.
+    </p>
+  </section>
+
+  <!-- Consultation Form -->
+  <section id="consultation" class="consultation">
+    <h2>Book a Free Consultation</h2>
+    <form id="consultation-form">
+      <input type="text" name="fullName" placeholder="Full name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone (optional)" />
+      <select name="service" required>
+        <option value="">Select service of interest</option>
+        <option value="Life Insurance">Life Insurance</option>
+        <option value="Children Education">Children Education Plan</option>
+        <option value="Annuity">Annuity & Retirement</option>
+        <option value="Family Protection">Family Protection</option>
+      </select>
+      <textarea name="message" placeholder="Message (optional)"></textarea>
+      <button type="submit" class="btn-primary">Submit</button>
+      <div id="form-status" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand-title">KARBA</div>
+      <div class="brand-sub">FINANCIAL CONSULTANT</div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/babatunde-bamigbetan-1a46b06122/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/share/1q5Ly2fTFET" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/karba_financial_consultant" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@karbafinancialconsultant" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <div class="copy">© 2025 KARBA. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Load config first, then main script -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
